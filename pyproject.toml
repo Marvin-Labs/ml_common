@@ -1,0 +1,14 @@
+[project]
+name = "ml_common"
+version = "0.0.1"
+authors = [
+  { name="Marvin Labs", email="marvin@marvin-labs.com" },
+]
+description = "Common files for Marvin Labs projects"
+readme = "README.md"
+requires-python = ">=3.10"
+
+
+[build-system]
+requires = ["hatchling", "unstructured"]
+build-backend = "hatchling.build"
