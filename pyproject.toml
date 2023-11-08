@@ -6,7 +6,7 @@ authors = [
 ]
 description = "Common files for Marvin Labs projects"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.8"
 
 
 [build-system]
