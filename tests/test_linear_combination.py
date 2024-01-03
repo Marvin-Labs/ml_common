@@ -34,3 +34,13 @@ def test_linear_combination_append_many():
     assert len(ltc1.elements) == 4
 
 
+def test_linear_combination_flatten():
+    ltc1 = LinearTextCombination([Text('test'), Text('test2')])
+    ltc2 = LinearTextCombination([Text('test3'), Text('test4')])
+
+    ltc = LinearTextCombination([ltc1, ltc2])
+
+    assert ltc.text == 'test test2 test3 test4'
+    assert len(ltc.elements) == 4
+
+
