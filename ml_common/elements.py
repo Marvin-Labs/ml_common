@@ -13,8 +13,15 @@ class LinearTextCombination(Text):
         sep_txt: str = " ",
     ):
         assert len(elements) > 0, "Must have at least one element"
-        self.first_element: Text = elements[0]
-        self.elements = elements
+        # we are looking through other LinearTextCombinations
+        self.elements = list()
+        for e in elements:
+            if isinstance(e, LinearTextCombination):
+                self.elements += e.elements
+            else:
+                self.elements.append(e)
+
+        self.first_element: Text = self.elements[0]
         self._sep_txt = sep_txt
 
         super().__init__(
